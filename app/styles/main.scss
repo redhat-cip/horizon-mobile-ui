@@ -1,24 +1,97 @@
-// $iconSpritePath: "../images/glyphicons-halflings.png";
-// $iconWhiteSpritePath: "../images/glyphicons-halflings-white.png";
 
-// @import "bootstrap-sass/lib/bootstrap";
+/*  variables */
+$black: #777;
+$red: #B03420;
+$blue: #4C7A96;
+$white: white;
+$border: #ccc;
+$font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$header-size: 50px;
 
-// /* Put your CSS here */
-// html, body {
-//   margin: 20px;
-// }
-
-// body {
-//     background: #fafafa;
-//     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-//     color: #333;
-// }
-
-// .navbar .brand {
-//     padding: 0 20px 0 30px;
-// }
 
 /*  main css */
-.pure-menu {
+body {
+    background: $white;
+    font-family: $font-family;
+    color: $black;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.logo {
+    display: inline-block;        
+    width: 50px;
     height: 50px;
+    background: url(../images/logo.png) no-repeat;
+}
+
+.dropdown-arrow {
+    display: inline-block;        
+    width: 10px;
+    height: 5px;
+    background: url(../images/quicknav_arrow.png) no-repeat;
+}
+
+#header {
+    width: 100%;
+    background-color: $white;
+    height: $header-size;
+    border-bottom: 1px solid $black;
+    position: fixed;
+    top:0;    
+    left:0;    
+    padding: 0 10px 0 10px;    
+
+    a {
+        text-decoration: none;
+        color: $black;        
+    }
+
+    .menu-nav {
+        display: inline-block;
+        height: 20px;
+        margin-top: 10px;
+        padding: 5px 5px;
+        vertical-align: top;
+
+        .position {
+            font-weight: bold;
+            font-size: 1.3em;            
+        }
+    }
+
+    .brand {
+        border-right: 1px solid $red;        
+        .logo {            
+            margin-top: -15px;
+        }
+        .dropdown-arrow {
+            vertical-align: top;
+            margin-top: 9px;
+        }
+    }
+}
+
+.dropdown {
+    margin:0; 
+    padding:0; 
+    list-style:none;
+}
+
+.pull-right {
+    float: right;
+    margin-right: 20px;
+}
+
+.user {
+    color: $black;
+    border-left: 1px solid $black;
+    width: 40px;
+    text-align: center;
+}
+
+#body {
+    margin-top: $header-size;
+    height: 8000px;
 }
