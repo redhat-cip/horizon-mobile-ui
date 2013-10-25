@@ -12,7 +12,7 @@
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.3.0/pure-min.css">
         <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/glyphicons.css">        
+        <link rel="stylesheet" href="styles/glyphicons.css">
         <link rel="stylesheet" href="styles/main.css">
         <!-- endbuild -->
 </head>
@@ -24,38 +24,50 @@
     <!--[if lt IE 9]>
       <script src="bower_components/es5-shim/es5-shim.js"></script>
       <script src="bower_components/json3/lib/json3.min.js"></script>
-    <![endif]-->   
-    
+    <![endif]-->
+
     <div class="pure-menu pure-menu-open pure-menu-horizontal" id="header">
       <a href="#" class="pure-menu-heading glyphicon glyphicon-list"></a>
 
       <ul>
-        <li class="pure-menu"><a href="#"><span class="logo">Overview</span></a></li>                
+        <li class="pure-menu"><a href="#"><span class="logo">Overview</span></a></li>
       </ul>
 
       <ul class="pull-right">
         <li class="pure-menu"><a href="#" class="glyphicon glyphicon-user"></a></li>
       </ul>
-      <!-- <a href="#" class="pure-menu-heading pull-right glyphicon glyphicon-user"></a></li>       -->
     </div>
-
-    <!-- <div id="header">          
-      <div class="menu-nav brand">
-          <span class="glyphicon glyphicon-list"></span>
-      </div>
-      <div class="menu-nav"><a href="#" class="logo"></a></div>
-      <div class="menu-nav"><a href="#" >Overview</a></div>      
-      <div class="menu-nav pull-right user">
-        <div class="glyphicon glyphicon-user dropdown"></div>
-      </div>
-    </div>
-     -->
 
 
     <div id="body">
 
+      <div class="pure-g menu">
+
+        <div class="pure-u-1-2">
+          <div class="menu-elem instances">
+            <div class="glyphicon glyphicon-cloud"></div>
+
+            <div class="legend">instances</div>
+
+          </div>
+        </div>
+
+        <div class="pure-u-1-2">
+          <div class="menu-elem volumes">
+            <div class="glyphicon glyphicon-hdd"></div>
+            <div class="legend">volumes</div>
+          </div>
+        </div>
+        <div class="pure-u-1-2">
+          <div class="menu-elem networks">
+            <div class="glyphicon glyphicon-transfer"></div>
+            <div class="legend">networks</div>
+          </div>
+        </div>
+      </div>
+
     <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+    <!-- <div class="container" ng-view=""></div> -->
     </div>
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
@@ -81,6 +93,7 @@
         <!-- endbuild -->
 
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
+        <script src="scripts/menu.js"></script>
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <!-- endbuild -->
