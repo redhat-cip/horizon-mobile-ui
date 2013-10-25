@@ -1,17 +1,17 @@
 'use strict';
 
-describe('Controller: MainCtrl', function () {
+describe('Controller: MenuCtrl', function () {
 
   // load the controller's module
   beforeEach(module('horizonMobileApp'));
 
-  var MainCtrl,
+  var MenuCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    MainCtrl = $controller('MainCtrl', {
+    MenuCtrl = $controller('MenuCtrl', {
       $scope: scope
     });
   }));
