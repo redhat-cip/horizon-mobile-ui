@@ -21,8 +21,8 @@ body {
 
 .logo {
     display: inline-block;        
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    height: 35px;
     background: url(../images/logo.png) no-repeat;
 }
 
@@ -54,34 +54,33 @@ body {
         margin-top: 10px;
         padding: 5px 5px;
         vertical-align: top;
-
-        .position {
-            font-weight: bold;
-            font-size: 1.3em;            
+        font-weight: bold;
+        font-size: 1.2em;            
+        .logo {
+            margin-top: -8px;
         }
     }
 
     .brand {
-        border-right: 1px solid $red;        
-        .logo {            
-            margin-top: -15px;
-        }
-        .dropdown-arrow {
-            vertical-align: top;
-            margin-top: 9px;
-        }
-    }
+        border-right: 1px solid $black;        
+        width: 30px;
+        text-align: center;
+    }        
 }
 
 .dropdown {
     margin:0; 
     padding:0; 
     list-style:none;
+    ul {        
+        position: absolute;
+        text-align:right;
+    }    
 }
 
 .pull-right {
     float: right;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .user {
