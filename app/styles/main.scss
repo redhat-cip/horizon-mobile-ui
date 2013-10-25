@@ -24,33 +24,11 @@ body {
     position: fixed;
     top: 0;
     background: $white;
-    color: $black;
+    color: $red;
     border-bottom: 1px solid $black;
     height: 50px;
     font-size: 1.2em;
     font-weight: bold;
-}
-
-
-.pure-menu.pure-menu-horizontal {
-    color: inherit;
-
-    .pure-menu-heading {
-        border-right: 1px solid $black;
-    }
-    .pull-right {
-        border-left: 1px solid $black;
-        top: 6px;
-        height: 35px;
-    }
-}
-
-.logo {
-    display: block;
-    padding-left: 40px;
-    padding-top: 8px;
-    background: url(../images/logo.png) no-repeat;
-    height: 35px;
 }
 
 #body {
@@ -58,24 +36,29 @@ body {
     height: 8000px;
 }
 
-.pure-menu li a {
+.pure-menu li {
+  margin-top: 5px;
 
+  a {
     &:hover, &:focus {
-        background: none;
+      background: none;
     }
-
-    &.glyphicon-user {
-        padding: 0px 20px;
+    &.glyphicon {
+      color: $red;
+      border-right: 1px solid $black;
     }
+  }
 }
 
 
 .menu-elem {
+  display: block;
   margin: 10px;
   padding: 10px;
   text-align: center;
   border: 1px solid $black;
   position: relative;
+  color: $black;
 
   .glyphicon {
     padding-top: 20px;
@@ -93,8 +76,5 @@ body {
     right: 15px;
     width: auto;
   }
-}
 
-.pull-right {
-    float: right;
 }
