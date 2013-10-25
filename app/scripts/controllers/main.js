@@ -1,7 +1,9 @@
-/*global angular, $*/
+/*global angular, $, console*/
+'use strict';
+
 angular.module('horizonMobileApp')
   .controller('MainCtrl', function () {
-    'use strict';
+
 
     $('.menu-elem').css({
       "height": function () {
@@ -13,4 +15,7 @@ angular.module('horizonMobileApp')
         return $(this).parent().width() / 2;
       }
     );
+  })
+  .controller('InstancesCtrl', function () {
+    console.log('instances');
   });
