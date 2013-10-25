@@ -1,9 +1,9 @@
 
 /*  variables */
-$black: #777;
+$black: #777777;
 $red: #B03420;
 $blue: #4C7A96;
-$white: white;
+$white: #fff;
 $border: #ccc;
 $font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $header-size: 50px;
@@ -19,78 +19,56 @@ body {
     height: 100%;
 }
 
-.logo {
-    display: inline-block;        
-    width: 35px;
-    height: 35px;
-    background: url(../images/logo.png) no-repeat;
-}
-
-.dropdown-arrow {
-    display: inline-block;        
-    width: 10px;
-    height: 5px;
-    background: url(../images/quicknav_arrow.png) no-repeat;
-}
 
 #header {
-    width: 100%;
-    background-color: $white;
-    height: $header-size;
-    border-bottom: 1px solid $black;
     position: fixed;
-    top:0;    
-    left:0;    
-    padding: 0 10px 0 10px;    
-
-    a {
-        text-decoration: none;
-        color: $black;        
-    }
-
-    .menu-nav {
-        display: inline-block;
-        height: 20px;
-        margin-top: 10px;
-        padding: 5px 5px;
-        vertical-align: top;
-        font-weight: bold;
-        font-size: 1.2em;            
-        .logo {
-            margin-top: -8px;
-        }
-    }
-
-    .brand {
-        border-right: 1px solid $black;        
-        width: 30px;
-        text-align: center;
-    }        
+    top: 0;
+    background: $white;
+    color: $black;
+    border-bottom: 1px solid $black;
+    height: 50px;
+    font-size: 1.2em;    
+    font-weight: bold;
 }
 
-.dropdown {
-    margin:0; 
-    padding:0; 
-    list-style:none;
-    ul {        
-        position: absolute;
-        text-align:right;
-    }    
+
+.pure-menu.pure-menu-horizontal {
+    color: inherit;
+
+    .pure-menu-heading {
+        border-right: 1px solid $black;
+    }
+    .pull-right {
+        border-left: 1px solid $black;        
+        top: 6px;
+        height: 35px;        
+    }
+}
+
+.logo {
+    display: block;    
+    padding-left: 40px;
+    padding-top: 8px;
+    background: url(../images/logo.png) no-repeat;
+    height: 35px;
+}
+
+#body {
+    margin-top: ($header-size + 10px);
+    height: 8000px;
+}
+
+.pure-menu li a {    
+
+    &:hover, &:focus {
+        background: none;
+    }
+
+    &.glyphicon-user {
+        padding: 0px 20px;
+    }
 }
 
 .pull-right {
     float: right;
-    margin-right: 10px;
-}
-
-.user {
-    color: $black;
-    border-left: 1px solid $black;
-    width: 40px;
-    text-align: center;
-}
-
-#body {
-    margin-top: $header-size;
-    height: 8000px;
 }
