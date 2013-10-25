@@ -26,18 +26,8 @@
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
-    <div class="pure-menu pure-menu-open pure-menu-horizontal" id="header">
 
-
-      <ul>
-        <li class="pure-menu"><a href="#" class="glyphicon glyphicon-list"></a></li>
-        <li class="pure-menu"><a href="#" class="glyphicon glyphicon-user"></a></li>
-        <li class="pure-menu"><a href="#">Horizon</a></li>
-      </ul>
-
-    </div>
-
-
+    <header></header>
     <div id="body">
     <!-- Add your site or application content here -->
     <div class="container" ng-view=""></div>
@@ -71,6 +61,7 @@
         <!-- build:js({.tmp,app}) scripts/scripts.js -->
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
+        <script src="scripts/directives.js"></script>
         <!-- endbuild -->
 </body>
 </html>
