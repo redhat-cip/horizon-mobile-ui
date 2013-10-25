@@ -2,11 +2,13 @@
 /*  variables */
 $black: #777777;
 $red: #B03420;
+$light-red:#C18D86;
 $blue: #4C7A96;
 $white: #fff;
 $border: #ccc;
 $font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $header-size: 50px;
+$header-space: 10px;
 
 
 /*  main css */
@@ -32,7 +34,7 @@ body {
 }
 
 #body {
-    margin-top: ($header-size + 10px);
+    margin-top: ($header-size + $header-space);
     height: 8000px;
 }
 
@@ -78,3 +80,15 @@ body {
   }
 
 }
+
+
+.pure-table thead {
+  background: $red;
+  color: $white;
+}
+
+.pure-table-odd td {
+  background-color: $light-red;
+  color: white;
+}
+
