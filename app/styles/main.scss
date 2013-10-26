@@ -1,14 +1,16 @@
 
 /*  variables */
-$black: #777777;
-$red: #B03420;
-$light-red:#C18D86;
-$blue: #4C7A96;
-$white: #fff;
-$border: #ccc;
-$font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$header-size: 50px;
-$header-space: 10px;
+$black:         #777777;
+$red:           #B03420;
+$light-red:     #C18D86;
+$blue:          #4C7A96;
+$yellow:        orange;
+$green:         green;
+$white:         #fff;
+$border:        #ccc;
+$font-family:   "Helvetica Neue", Helvetica, Arial, sans-serif;
+$header-size:   50px;
+$header-space:  10px;
 
 
 /*  main css */
@@ -81,14 +83,15 @@ body {
 
 }
 
+.instance {
+  font-size: 1.1em;
+  height: 50px;
+  border-bottom: 1px solid $black;
 
-.pure-table thead {
-  background: $red;
-  color: $white;
+  .name {
+    padding-left: 10px;
+  }
+  .actions {
+    font-size: 1.6em;
+  }
 }
-
-.pure-table-odd td {
-  background-color: $light-red;
-  color: white;
-}
-
