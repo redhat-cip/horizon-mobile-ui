@@ -8,7 +8,8 @@ angular.module('horizonMobileApp', [
   .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/main.html'
+        templateUrl: 'views/menu.html',
+        controller: 'MenuCtrl'
       })
       .when('/instances',{
         templateUrl: 'views/instances.html',

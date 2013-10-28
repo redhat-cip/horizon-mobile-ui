@@ -1,18 +1,36 @@
-/*global angular, $, console*/
+/*global angular, $, window*/
 'use strict';
 
 angular.module('horizonMobileApp')
   .directive('header', function () {
     return {
       restrict: 'E',
-      templateUrl: 'views/header.html'
+      templateUrl: 'views/header.html',
+      controller: function ($scope, $rootScope) {
+        $scope.header = $rootScope.header;
+      }
     };
   })
   .directive('adaptWidth', function () {
     return {
-      link: function (scope, element, attrs) {
-        element.css("height",element.width());
-        element.children(".glyphicon").css("font-size", element.width() * 0.5);
+      link: function (scope, element) {
+        var adapt = function () {
+          element.css("height", element.width());
+          element.children(".glyphicon").css("font-size", element.width() * 0.5);
+        };
+        adapt();
+
+        $(window).on("orientationchange", adapt);
+      }
+    };
+  })
+  .directive('adaptCoor', function () {
+    return {
+      link: function (scope, element) {
+        var coor;
+        coor = element.offset();
+        coor.top = coor.top + element.siblings().height();
+        element.offset(coor);
       }
     };
   });
