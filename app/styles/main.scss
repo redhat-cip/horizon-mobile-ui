@@ -23,6 +23,10 @@ body {
   height: 100%;
 }
 
+#body {
+  margin-top: ($header-size + $header-space);
+  height: 8000px;
+}
 
 #header {
   position: fixed;
@@ -33,31 +37,25 @@ body {
   height: 50px;
   font-size: 1.2em;
   font-weight: bold;
-}
 
-#body {
-  margin-top: ($header-size + $header-space);
-  height: 8000px;
-}
+  li {
+    margin-top: 5px;
 
-.pure-menu li {
-  margin-top: 5px;
-
-  a {
-    &:hover, &:focus {
-      background: none;
+    a {
+      &:hover, &:focus {
+        background: none;
+      }
+      &.glyphicon {
+        color: $red;
+        border-right: 1px solid $black;
+      }
     }
-    &.glyphicon {
-      color: $red;
-      border-right: 1px solid $black;
+
+    .location {
+      text-transform: capitalize;
     }
   }
-
-  .location {
-    text-transform: capitalize;
-  }
 }
-
 
 .menu-elem {
   display: block;
