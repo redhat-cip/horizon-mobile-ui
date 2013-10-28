@@ -11,6 +11,21 @@ angular.module('horizonMobileApp')
       }
     };
   })
+  .directive('dropdown', function () {
+    return {
+      link: function (scope, element) {
+        var menu;
+        menu = element.children('ul');
+        element.click(function(){
+          if (menu.is(':visible')) {
+            menu.slideUp();
+          } else {
+            menu.slideDown();
+          }
+        });
+      }
+    };
+  })
   .directive('adaptWidth', function () {
     return {
       link: function (scope, element) {
