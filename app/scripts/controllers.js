@@ -19,10 +19,62 @@ angular.module('horizonMobileApp')
     ];
   })
   .controller('InstanceCtrl', function ($scope, $rootScope, $routeParams) {
+    var id = $routeParams.id
+
+
     //TODO http request to rest api
-    $rootScope.header = "instance";
+    $scope.instance = {
+      id: id,
+      name: 'instance name',
+      usages: [
+        {
+          name: 'Global Disk Usage',
+          contents: [
+            {
+              entitled: 'Disk Read Bytes',
+              value: '0',
+              unit: 'B'
+            },
+            {
+              entitled: 'Disk Read Requests',
+              value: '0',
+            },
+            {
+              entitled: 'Disk Write Bytes',
+              value: '0',
+              unit: 'B'
+            },
+            {
+              entitled: 'Disk Write Requests',
+              value: '0'
+            }
+          ]
+        },
+        {
+          name: 'Global Network Traffic Usage',
+          contents: [
+            {
+              entitled: 'Network Incoming Bytes',
+              value: '0',
+              unit: 'B'
+            },
+            {
+              entitled: 'Network Incoming Packets',
+              value: '0',
+            },
+            {
+              entitled: 'Network Outgoing Bytes',
+              value: '0',
+              unit: 'B'
+            },
+            {
+              entitled: 'Network Outgoing Packets',
+              value: '0'
+            }
+          ]
+        }
+      ]
+    }
 
-
-
-    console.log($routeParams.id);
+    $rootScope.header = $scope.instance.name;
   });

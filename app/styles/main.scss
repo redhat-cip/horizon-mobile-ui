@@ -23,14 +23,29 @@ body {
   height: 100%;
 }
 
-#body {
-  margin-top: ($header-size + $header-space);
-  height: 8000px;
+// overrides pure
+.pure-table {
+  border: none;
+  th, td {
+    padding: 0;
+
+    * {
+      padding: 20px 10px;
+    }
+  }
 }
+
 
 //hack for mobile active link
 a {
-    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  text-decoration: none;
+  color: $black;
+}
+
+#body {
+  margin-top: ($header-size + $header-space);
+  height: 8000px;
 }
 
 #header {
@@ -40,7 +55,7 @@ a {
   color: $red;
   border-bottom: 1px solid $black;
   height: 50px;
-  font-size: 1.2em;
+  font-size: 1.3em;
   font-weight: bold;
 
   li {
@@ -100,7 +115,6 @@ a {
 
 .pure-table.instances {
   margin-top: - $header-space;
-  border: none;
   thead {
     color: $white;
     background: $red;
@@ -108,24 +122,12 @@ a {
     z-index: 1;
   }
 
-  th, td {
-    padding: 0;
-    border-right: 0;
-
-    div {
-      padding: 20px 10px;
-    }
-  }
-
   .instance a {
     display: block;
   }
 
-  a {
-    padding: 20px 5px;
+  .actions a {
     display: inline-block;
-    text-decoration: none;
-    color: $black;
   }
 
   .state {
@@ -134,5 +136,18 @@ a {
 
   .actions {
     text-align: center;
+  }
+}
+
+
+.instance {
+
+  .heading {
+    font-size: 1.1em;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 0;
+    margin: 0 10%;
+    border-bottom: 1px solid $black;
   }
 }
