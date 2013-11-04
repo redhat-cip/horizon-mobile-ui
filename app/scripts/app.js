@@ -15,6 +15,10 @@ angular.module('horizonMobileApp', [
         templateUrl: 'views/instances.html',
         controller: 'InstancesCtrl'
       })
+      .when('/instance/:id', {
+        templateUrl: 'views/instance.html',
+        controller: 'InstanceCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });

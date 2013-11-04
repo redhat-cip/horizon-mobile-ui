@@ -6,15 +6,16 @@ angular.module('horizonMobileApp')
     $rootScope.header = "horizon";
   })
   .controller('InstancesCtrl', function ($scope, $rootScope) {
-    //TODO http request to rest api
+
     $rootScope.header = "instances";
 
+    //TODO http request to rest api
     $scope.instances = [
-      {name: "instance1", power:"running"},
-      {name: "instance2", power:"suspended"},
-      {name: "instance3", power:"paused"},
-      {name: "instance4", power:"running"},
-      {name: "instance5", power:"running"}
+      {id: 1, name: "instance1", power:"running"},
+      {id: 2, name: "instance2", power:"suspended"},
+      {id: 3, name: "instance3", power:"paused"},
+      {id: 4, name: "instance4", power:"running"},
+      {id: 5, name: "instance5", power:"running"}
     ];
 
     $scope.glyphicon = function (state) {
@@ -27,4 +28,12 @@ angular.module('horizonMobileApp')
         return "glyphicon-stop";
       }
     }
+  })
+  .controller('InstanceCtrl', function ($scope, $rootScope, $routeParams) {
+    //TODO http request to rest api
+    $rootScope.header = "instance";
+
+
+
+    console.log($routeParams.id);
   });

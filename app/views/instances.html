@@ -9,7 +9,7 @@
 
   <tbody class="pure-u-1" adapt-coor>
     <tr class="pure-g" ng-repeat="instance in instances">
-      <td class="pure-u-1-2 instance"><div>{{instance.name}}</div></td>
+      <td class="pure-u-1-2 instance"><a ng-href="#/instance/{{instance.id}}" >{{instance.name}}</a></td>
       <td class="pure-u-1-6 state"><div class="glyphicon" ng-class="glyphicon(instance.power)"></div></td>
       <td class="pure-u-1-3 actions">
         <a href="#" class="glyphicon glyphicon-play"></a>
