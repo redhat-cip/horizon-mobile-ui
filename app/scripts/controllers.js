@@ -17,17 +17,6 @@ angular.module('horizonMobileApp')
       {id: 4, name: "instance4", power:"running"},
       {id: 5, name: "instance5", power:"running"}
     ];
-
-    $scope.glyphicon = function (state) {
-      switch (state) {
-      case "running":
-        return "glyphicon-play";
-      case "suspended":
-        return "glyphicon-pause";
-      case "paused":
-        return "glyphicon-stop";
-      }
-    }
   })
   .controller('InstanceCtrl', function ($scope, $rootScope, $routeParams) {
     //TODO http request to rest api

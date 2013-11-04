@@ -48,4 +48,16 @@ angular.module('horizonMobileApp')
         element.offset(coor);
       }
     };
+  })
+  .filter('glyphicon', function() {
+    return function(input) {
+      switch (input) {
+      case "running":
+        return "glyphicon-play";
+      case "suspended":
+        return "glyphicon-pause";
+      case "paused":
+        return "glyphicon-stop";
+      }
+    }
   });
